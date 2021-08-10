@@ -767,7 +767,8 @@ class Client(object):
 
         :return:
         """
-        error_code = error['error']
+        error = error['error']
+        error_code = error['id']
         error_message = error['message']
         if error_code == "1000":
             raise BadRequestError(error_message)
